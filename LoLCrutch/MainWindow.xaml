@@ -1,7 +1,7 @@
 ﻿<Window x:Class="LoLCrutch.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="LoL Crutch" Height="284.666" Width="446" Icon="Images/AnnieSquare.png" ResizeMode="NoResize">
+        Title="LoL Crutch" Height="315.666" Width="446" Icon="Images/AnnieSquare.png" ResizeMode="NoResize">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="1"/>
@@ -33,6 +33,10 @@
         <TextBlock x:Name="DragonTimers" HorizontalAlignment="Left" Margin="46.667,197,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Height="26" Width="100" FontSize="16" Foreground="White" TextAlignment="Center" Grid.Column="1"/>
         <TextBlock x:Name="BaronTimers" HorizontalAlignment="Left" Margin="151.667,197,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Height="26" Width="100" FontSize="16" Foreground="White" TextAlignment="Center" Grid.Column="1"/>
         <TextBlock x:Name="RedTimers" HorizontalAlignment="Left" Margin="111,197,0,0" TextWrapping="Wrap" Text="00:00 | 00:00" VerticalAlignment="Top" Height="26" Width="100" FontSize="16" Foreground="White" TextAlignment="Center" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="MinorTimers_Tmp" Margin="6,252,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Height="26" FontSize="16" Foreground="White" TextAlignment="Center" HorizontalAlignment="Left" Width="100"/>
+        <TextBlock x:Name="DragonTimers_Tmp" HorizontalAlignment="Left" Margin="47,252,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Height="26" Width="100" FontSize="16" Foreground="White" TextAlignment="Center" Grid.Column="1"/>
+        <TextBlock x:Name="BaronTimers_Tmp" HorizontalAlignment="Left" Margin="152,252,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Height="26" Width="100" FontSize="16" Foreground="White" TextAlignment="Center" Grid.Column="1"/>
+        <TextBlock x:Name="BuffTimers_Tmp" HorizontalAlignment="Left" Margin="111,252,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top" Height="26" Width="100" FontSize="16" Foreground="White" TextAlignment="Center" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

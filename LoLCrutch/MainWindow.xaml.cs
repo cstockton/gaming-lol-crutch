@@ -40,6 +40,9 @@ namespace LoLCrutch
 
         private static TimeSpan MINION_BUFF_INITIAL = new TimeSpan(0, 0, 1, 55); // 1 minutes 55 seconds
         private static TimeSpan MINION_BUFF_RESPAWN = new TimeSpan(0, 0, 5, 0); // 5 minutes
+
+        private static TimeSpan MINION_MINOR_INITIAL = new TimeSpan(0, 0, 2, 5); // 2 minutes 5 seconds
+        private static TimeSpan MINION_MINOR_RESPAWN = new TimeSpan(0, 0, 0, 50); // 50 seconds
         
         private int state = STATE_STOPPED;
 
@@ -161,6 +164,7 @@ namespace LoLCrutch
                 UpdateDragon(elapsed);
                 UpdateBlue(elapsed);
                 UpdateRed(elapsed);
+                UpdateTmp(elapsed);
 
             }
         }
@@ -205,6 +209,14 @@ namespace LoLCrutch
         private string PrintTimes(TimeSpan ours, TimeSpan theirs)
         {
             return PrintTime(ours) + " | " + PrintTime(theirs);
+        }
+
+        private void UpdateTmp(TimeSpan elapsed)
+        {
+            BaronTimers_Tmp.Text = PrintTime(MINION_BARON_RESPAWN.Add(elapsed));
+            DragonTimers_Tmp.Text = PrintTime(MINION_DRAGON_RESPAWN.Add(elapsed));
+            BuffTimers_Tmp.Text = PrintTime(MINION_BUFF_RESPAWN.Add(elapsed));
+            MinorTimers_Tmp.Text = PrintTime(MINION_MINOR_RESPAWN.Add(elapsed));
         }
 
         private void UpdateBaron(TimeSpan elapsed)
